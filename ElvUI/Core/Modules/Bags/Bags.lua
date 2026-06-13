@@ -2079,6 +2079,14 @@ function B:CloseAllBags()
 	TT:GameTooltip_SetDefaultAnchor(GameTooltip)
 end
 
+-- Post-hook of Blizzard's global CloseAllBags (mail/vendor auto-close).
+-- Deliberate in-ElvUI closes call the B:CloseAllBags method directly and are unaffected.
+function B:AutoCloseAllBags(frame)
+	if frame == _G.MailFrame and not B.db.autoToggle.close.mail then return end
+	if frame == _G.MerchantFrame and not B.db.autoToggle.close.vendor then return end
+	B:CloseAllBags()
+end
+
 function B:PanelShow(panel)
 	if panel and not panel:IsShown() then
 		panel:Show()
@@ -2626,7 +2634,7 @@ function B:Initialize()
 	B:SecureHook('ToggleBag')
 	B:SecureHook('ToggleBackpack')
 	B:SecureHook('ToggleAllBags')
-	B:SecureHook('CloseAllBags')
+	B:SecureHook('CloseAllBags', 'AutoCloseAllBags')
 	B:SecureHook('OpenAllBags')
 
 	B:SetupAutoToggle()
