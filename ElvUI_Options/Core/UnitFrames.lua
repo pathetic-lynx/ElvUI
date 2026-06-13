@@ -4061,6 +4061,224 @@ E.Options.args.unitframe.args.player = {
 					}
 				}
 			}
+		},
+		swingbar = {
+			order = 800,
+			type = "group",
+			name = L["Swing Bar"],
+			get = function(info) return E.db.unitframe.units.player.swingbar[info[#info]] end,
+			set = function(info, value) E.db.unitframe.units.player.swingbar[info[#info]] = value UF:CreateAndUpdateUF("player") end,
+			args = {
+				header = {
+					order = 1,
+					type = "header",
+					name = L["Swing Bar"]
+				},
+				enable = {
+					order = 2,
+					type = "toggle",
+					name = L["Enable"]
+				},
+				forceShowSingle = {
+					order = 3,
+					type = "execute",
+					name = L["Show Swing Bar"],
+					func = function()
+						local bar = ElvUF_PlayerSwingBar
+						if bar.testMode then
+							bar:Hide()
+							bar.testMode = nil
+						else
+							bar:Show()
+
+							bar.Twohand:Show()
+							bar.Twohand:SetMinMaxValues(1, 100)
+							bar.Twohand:SetValue(random(10, 90))
+							bar.Twohand.Text:SetText("0.0")
+
+							bar.Mainhand:Hide()
+							bar.Offhand:Hide()
+
+							bar.testMode = true
+						end
+					end,
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				forceShowDual = {
+					order = 4,
+					type = "execute",
+					name = L["Show Swing Bar (Dual Wield)"],
+					func = function()
+						local bar = ElvUF_PlayerSwingBar
+						if bar.testMode then
+							bar:Hide()
+							bar.testMode = nil
+						else
+							bar:Show()
+
+							bar.Mainhand:Show()
+							bar.Mainhand:SetMinMaxValues(1, 100)
+							bar.Mainhand:SetValue(random(10, 90))
+							bar.Mainhand.Text:SetText("0.0")
+
+							bar.Offhand:Show()
+							bar.Offhand:SetMinMaxValues(1, 100)
+							bar.Offhand:SetValue(random(10, 90))
+							bar.Offhand.Text:SetText("0.0")
+
+							bar.Twohand:Hide()
+
+							bar.testMode = true
+						end
+					end,
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				width = {
+					order = 5,
+					type = "range",
+					name = L["Width"],
+					min = 5, max = 600, step = 1,
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				height = {
+					order = 6,
+					type = "range",
+					name = L["Height"],
+					min = 5, max = 600, step = 1,
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				spacing = {
+					order = 7,
+					type = "range",
+					name = L["Spacing"],
+					min = 0, max = 20, step = 1,
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				spark = {
+					order = 8,
+					type = "toggle",
+					name = L["Spark"],
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				verticalOrientation = {
+					order = 9,
+					type = "toggle",
+					name = L["Vertical Fill Direction"],
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				color = {
+					order = 10,
+					type = "color",
+					name = L["COLOR"],
+					get = function(info)
+						local t = E.db.unitframe.units.player.swingbar[info[#info]]
+						local d = P.unitframe.units.player.swingbar[info[#info]]
+						return t.r, t.g, t.b, t.a, d.r, d.g, d.b
+					end,
+					set = function(info, r, g, b)
+						local t = E.db.unitframe.units.player.swingbar[info[#info]]
+						t.r, t.g, t.b = r, g, b
+						UF:CreateAndUpdateUF("player")
+					end,
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				backdropColor = {
+					order = 11,
+					type = "color",
+					name = L["Backdrop Color"],
+					get = function(info)
+						local t = E.db.unitframe.units.player.swingbar[info[#info]]
+						local d = P.unitframe.units.player.swingbar[info[#info]]
+						return t.r, t.g, t.b, t.a, d.r, d.g, d.b
+					end,
+					set = function(info, r, g, b)
+						local t = E.db.unitframe.units.player.swingbar[info[#info]]
+						t.r, t.g, t.b = r, g, b
+						UF:CreateAndUpdateUF("player")
+					end,
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end
+				},
+				textGroup = {
+					order = 12,
+					type = "group",
+					name = L["Text"],
+					guiInline = true,
+					get = function(info) return E.db.unitframe.units.player.swingbar.text[info[#info]] end,
+					set = function(info, value) E.db.unitframe.units.player.swingbar.text[info[#info]] = value UF:CreateAndUpdateUF("player") end,
+					disabled = function() return not E.db.unitframe.units.player.swingbar.enable end,
+					args = {
+						enable = {
+							order = 1,
+							type = "toggle",
+							name = L["Enable"]
+						},
+						position = {
+							order = 2,
+							type = "select",
+							name = L["Text Position"],
+							values = positionValues,
+							disabled = function() return not E.db.unitframe.units.player.swingbar.text.enable end
+						},
+						xOffset = {
+							order = 3,
+							type = "range",
+							name = L["X-Offset"],
+							min = -300, max = 300, step = 1,
+							disabled = function() return not E.db.unitframe.units.player.swingbar.text.enable end
+						},
+						yOffset = {
+							order = 4,
+							type = "range",
+							name = L["Y-Offset"],
+							min = -300, max = 300, step = 1,
+							disabled = function() return not E.db.unitframe.units.player.swingbar.text.enable end
+						},
+						color = {
+							order = 5,
+							type = "color",
+							name = L["Text Color"],
+							get = function(info)
+								local t = E.db.unitframe.units.player.swingbar.text[info[#info]]
+								local d = P.unitframe.units.player.swingbar.text[info[#info]]
+								return t.r, t.g, t.b, t.a, d.r, d.g, d.b
+							end,
+							set = function(info, r, g, b)
+								local t = E.db.unitframe.units.player.swingbar.text[info[#info]]
+								t.r, t.g, t.b = r, g, b
+								UF:CreateAndUpdateUF("player")
+							end,
+							disabled = function() return not E.db.unitframe.units.player.swingbar.text.enable end
+						},
+						font = {
+							order = 6,
+							type = "select", dialogControl = "LSM30_Font",
+							name = L["Font"],
+							values = AceGUIWidgetLSMlists.font,
+							disabled = function() return not E.db.unitframe.units.player.swingbar.text.enable end
+						},
+						fontSize = {
+							order = 7,
+							type = "range",
+							name = L["FONT_SIZE"],
+							min = 6, max = 32, step = 1,
+							disabled = function() return not E.db.unitframe.units.player.swingbar.text.enable end
+						},
+						fontOutline = {
+							order = 8,
+							type = "select",
+							name = L["Font Outline"],
+							desc = L["Set the font outline."],
+							values = {
+								["NONE"] = L["NONE"],
+								["OUTLINE"] = "OUTLINE",
+								["MONOCHROMEOUTLINE"] = "MONOCHROMEOUTLINE",
+								["THICKOUTLINE"] = "THICKOUTLINE"
+							},
+							disabled = function() return not E.db.unitframe.units.player.swingbar.text.enable end
+						}
+					}
+				}
+			}
 		}
 	}
 }

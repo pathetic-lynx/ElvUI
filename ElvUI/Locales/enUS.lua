@@ -4,6 +4,10 @@ local L = E.Libs.ACL:NewLocale('ElvUI', 'enUS', true, true)
 
 L["Restrict Pings"] = true
 L["Player"] = true
+L["Swing Bar"] = true
+L["Player SwingBar"] = true
+L["Show Swing Bar"] = true
+L["Show Swing Bar (Dual Wield)"] = true
 L["Small"] = true
 L["Medium"] = true
 L["Large"] = true

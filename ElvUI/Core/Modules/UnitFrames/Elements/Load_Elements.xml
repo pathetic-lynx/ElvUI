@@ -28,6 +28,7 @@
 	<Script file="RestingIndicator.lua"/>
 	<Script file="ResurrectionIcon.lua"/>
 	<Script file="RoleIcons.lua"/>
+	<Script file="SwingBar.lua"/>
 	<Script file="Threat.lua"/>
 	<Script file="Trinket.lua"/>
 </Ui>
