@@ -535,3 +535,22 @@ L["Vertical Spacing"] = true
 -- Bag auto-toggle (open/close split)
 L["Open bags when these open"] = true
 L["Close bags when these close"] = true
+
+-- CastBar Overlay
+L["CBO_POWER_DISABLED"] = "The %s power frame is disabled. Setting castbar overlay to health instead."
+L["I understand"] = true
+L["CastBar Overlay"] = true
+L["Enable Overlay"] = true
+L["Overlay the castbar on the chosen panel."] = true
+L["Overlay Panel"] = true
+L["Choose which panel to overlay the castbar on."] = true
+L["Hide Text"] = true
+L["Hide Castbar text. Useful if your power height is very low or if you use power offset."] = true
+L["Text xOffset"] = true
+L["Move castbar text to the left or to the right. Default is 4"] = true
+L["Text yOffset"] = true
+L["Move castbar text up or down. Default is 0"] = true
+L["Time xOffset"] = true
+L["Move castbar time to the left or to the right. Default is -4"] = true
+L["Time yOffset"] = true
+L["Move castbar time up or down. Default is 0"] = true

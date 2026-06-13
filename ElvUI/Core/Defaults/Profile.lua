@@ -1361,6 +1361,16 @@ P.datatexts = {
 	noCombatHover = false,
 }
 
+--CastBar Overlay
+P.CBO = {
+	player = { overlay = false, overlayOnFrame = "POWER", hidetext = false, xOffsetText = 4, yOffsetText = 0, xOffsetTime = -4, yOffsetTime = 0 },
+	target = { overlay = false, overlayOnFrame = "POWER", hidetext = false, xOffsetText = 4, yOffsetText = 0, xOffsetTime = -4, yOffsetTime = 0 },
+	focus  = { overlay = false, overlayOnFrame = "POWER", hidetext = false, xOffsetText = 4, yOffsetText = 0, xOffsetTime = -4, yOffsetTime = 0 },
+	pet    = { overlay = false, overlayOnFrame = "POWER", hidetext = false, xOffsetText = 4, yOffsetText = 0, xOffsetTime = -4, yOffsetTime = 0 },
+	boss   = { overlay = false, overlayOnFrame = "POWER", hidetext = false, xOffsetText = 4, yOffsetText = 0, xOffsetTime = -4, yOffsetTime = 0 },
+	arena  = { overlay = false, overlayOnFrame = "POWER", hidetext = false, xOffsetText = 4, yOffsetText = 0, xOffsetTime = -4, yOffsetTime = 0 },
+}
+
 --Aura Bars Movers
 P.abm = {
 	player = false,
