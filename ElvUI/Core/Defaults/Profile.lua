@@ -1324,6 +1324,16 @@ P.datatexts = {
 			numPoints = 2,
 			"Guild",
 			"Friends"
+		},
+		LocPlusLeftDT = {
+			enable = true,
+			numPoints = 1,
+			"Primary Stat"
+		},
+		LocPlusRightDT = {
+			enable = true,
+			numPoints = 1,
+			"Time"
 		}
 	},
 	battlePanel = {
@@ -1341,6 +1351,66 @@ P.datatexts = {
 	},
 	noCombatClick = false,
 	noCombatHover = false,
+}
+
+--LocationPlus
+P.locplus = {
+	-- Options
+	both = true,
+	combat = false,
+	timer = 0.5,
+	dig = true,
+	displayOther = "RLEVEL",
+	showicon = true,
+	hidecoords = false,
+	hidecoordsInInstance = true,
+	zonetext = true,
+	visibility = "",
+	-- Tooltip
+	tt = true,
+	ttcombathide = true,
+	tthint = true,
+	ttst = true,
+	ttlvl = true,
+	fish = true,
+	ttinst = true,
+	ttreczones = true,
+	ttrecinst = true,
+	ttcoords = true,
+	curr = true,
+	prof = true,
+	profcap = false,
+	-- Filters
+	tthideraid = false,
+	tthidepvp = false,
+	-- Layout
+	dtshow = true,
+	shadow = false,
+	trans = true,
+	noback = true,
+	ht = false,
+	frameStrata = "LOW",
+	frameLevel = 2,
+	lpwidth = 200,
+	dtwidth = 100,
+	dtheight = 21,
+	lpauto = true,
+	userColor = { r = 1, g = 1, b = 1 },
+	customColor = 1,
+	userCoordsColor = { r = 1, g = 1, b = 1 },
+	customCoordsColor = 3,
+	trunc = false,
+	mouseover = false,
+	malpha = 1,
+	spacingAuto = true,
+	spacingManual = 20,
+	-- Fonts
+	lpfont = "PT Sans Narrow",
+	lpfontsize = 12,
+	lpfontflags = "NONE",
+	useDTfont = true,
+	-- Init
+	LoginMsg = true,
 }
 
 --Tooltip

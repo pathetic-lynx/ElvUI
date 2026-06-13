@@ -9,6 +9,7 @@
 	<Script file='Chat.lua'/>
 	<Script file='Cooldown.lua'/>
 	<Script file='DataTexts.lua'/>
+	<Script file='LocationPlus.lua'/>
 	<Script file='DataBars.lua'/>
 	<Script file='Filters.lua'/>
 	<Script file='Skins.lua'/>

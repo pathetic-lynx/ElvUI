@@ -11,5 +11,6 @@
 	<Include file='Bags\Load_Bags.xml'/>
 	<Include file='Blizzard\Load_Blizzard.xml'/>
 	<Include file='Misc\Load_Misc.xml'/>
+	<Include file='LocationPlus\Load_LocationPlus.xml'/>
 	<Include file='Skins\Load_Skins.xml'/>
 </Ui>

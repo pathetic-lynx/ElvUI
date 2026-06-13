@@ -4,6 +4,9 @@
 
 	<Include file='Core\LibGroupTalents-1.0\LibGroupTalents-1.0.xml'/>
 	<Include file='Core\LibBabble-TalentTree-3.0\LibBabble-TalentTree-3.0.xml'/>
+	<Script file='Core\LibBabble-Zone-3.0\LibBabble-3.0.lua'/>
+	<Script file='Core\LibBabble-Zone-3.0\LibBabble-Zone-3.0.lua'/>
+	<Script file='Core\LibTourist-3.0\LibTourist-3.0.lua'/>
 	<Script file='Core\LibCompat-1.0\LibCompat-1.0.lua'/>
 
 	<Include file='Core\Ace3\AceGUI-3.0\AceGUI-3.0.xml'/>
