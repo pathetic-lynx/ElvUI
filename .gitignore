@@ -2,3 +2,12 @@
 .vscode/lua.booster.lint.json
 .gpt-runner/copilot.gpt.md
 .vscode/settings.json
+ElvUI_AuraBarsMovers/
+ElvUI_BagControl/
+ElvUI_CastBarOverlay/
+ElvUI_CustomTags/
+ElvUI_DTBars2/
+ElvUI_DataTextColors/
+ElvUI_ImprovedSpecSwitch/
+ElvUI_RaidMarkers/
+ElvUI_VisualProcs/
