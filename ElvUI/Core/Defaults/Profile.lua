@@ -394,6 +394,12 @@ P.bags = {
 		professions = false,
 		guildBank = false,
 		trade = false,
+		close = {
+			bank = true,
+			auctionHouse = true,
+			professions = true,
+			trade = true,
+		},
 	},
 	spinner = {
 		enable = true,

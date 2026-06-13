@@ -531,3 +531,7 @@ L["Show/Hide the coord frames"] = true
 
 -- Aura Bars Movers
 L["Vertical Spacing"] = true
+
+-- Bag auto-toggle (open/close split)
+L["Open bags when these open"] = true
+L["Close bags when these close"] = true

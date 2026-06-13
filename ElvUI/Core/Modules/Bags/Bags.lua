@@ -2189,7 +2189,7 @@ function B:CloseBank()
 		B.BankFrame:Hide()
 	end
 
-	if B:CloseAllBags() then
+	if B.db.autoToggle.close.bank and B:CloseAllBags() then
 		B:CloseSound() -- the bags werent open but we should play the sound
 	end
 end
@@ -2446,10 +2446,12 @@ function B:AutoToggleFunction()
 	local option = B.AutoToggleEvents[self]
 	if not option then return end
 
-	if B.db.autoToggle[option] and not B.AutoToggleClose[self] then
+	if B.AutoToggleClose[self] then
+		if B.db.autoToggle.close[option] then
+			B:CloseAllBags()
+		end
+	elseif B.db.autoToggle[option] then
 		B:OpenBags()
-	else
-		B:CloseAllBags()
 	end
 end
 
