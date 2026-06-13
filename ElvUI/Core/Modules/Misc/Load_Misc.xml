@@ -9,4 +9,5 @@
 	<Script file='InfoItemLevel.lua'/>
 	<Script file='RaidUtility.lua'/>
 	<Script file='AFK.lua'/>
+	<Script file='AuraBarsMovers.lua'/>
 </Ui>

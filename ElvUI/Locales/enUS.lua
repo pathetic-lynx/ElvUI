@@ -528,3 +528,6 @@ L["with Entrance Coords"] = true
 L["Zone and Subzone"] = true
 L["Hide Coords"] = true
 L["Show/Hide the coord frames"] = true
+
+-- Aura Bars Movers
+L["Vertical Spacing"] = true

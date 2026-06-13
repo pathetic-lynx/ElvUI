@@ -1353,6 +1353,22 @@ P.datatexts = {
 	noCombatHover = false,
 }
 
+--Aura Bars Movers
+P.abm = {
+	player = false,
+	target = false,
+	focus = false,
+	pet = false,
+	playerw = 270,
+	targetw = 270,
+	focusw = 190,
+	petw = 130,
+	playerSpace = 0,
+	targetSpace = 0,
+	focusSpace = 0,
+	petSpace = 0,
+}
+
 --LocationPlus
 P.locplus = {
 	-- Options
