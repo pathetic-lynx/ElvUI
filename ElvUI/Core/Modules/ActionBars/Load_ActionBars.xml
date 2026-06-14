@@ -5,4 +5,6 @@
 	<Script file="TotemBar.lua"/>
 	<Script file="Bind.lua"/>
 	<Script file="MicroBar.lua"/>
+	<Include file="LibBlizzardProcs\LibBlizzardProcs.xml"/>
+	<Script file="VisualProcs.lua"/>
 </Ui>

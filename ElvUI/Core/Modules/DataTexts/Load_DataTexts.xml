@@ -59,4 +59,9 @@
 	<Script file='System.lua'/>
 	<Script file='Time.lua'/>
 	<Script file='Volume.lua'/>
+
+	<Script file='DataTextColors.lua'/>
+	<Script file='DTBars2.lua'/>
+	<Script file='DTBars2_Options.lua'/>
+	<Script file='EquipmentSetSwitch.lua'/>
 </Ui>

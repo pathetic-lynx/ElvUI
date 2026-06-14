@@ -11,4 +11,5 @@
 	<Script file='AFK.lua'/>
 	<Script file='AuraBarsMovers.lua'/>
 	<Script file='CastBarOverlay.lua'/>
+	<Script file='RaidMarkersBar.lua'/>
 </Ui>

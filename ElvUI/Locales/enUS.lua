@@ -572,3 +572,67 @@ L["Time xOffset"] = true
 L["Move castbar time to the left or to the right. Default is -4"] = true
 L["Time yOffset"] = true
 L["Move castbar time up or down. Default is 0"] = true
+
+-- DataTextColors
+L["DTC Text Color"] = true
+L["Value Color"] = true
+
+-- RaidMarkersBar
+L["Automatic"] = true
+L["Choose the orientation of the raid markers bar."] = true
+L["Click to clear the mark."] = true
+L["Click to mark the target."] = true
+L["Raid Markers Bar"] = true
+L["Select how the raid markers bar will be displayed."] = true
+L["The direction that the mark frames will grow from the anchor."] = true
+
+-- VisualProcs
+L["Button Glow"] = true
+L["Overlay Frame"] = true
+L["Overlay Frame Scale"] = true
+L["Disable Sound"] = true
+L["Disable playing sound on overlay proc."] = true
+L["Show/Hide Overlay"] = true
+
+-- DTBars2
+L["DTBars2_DESC"] = "Allows creating and managing additional datatext panels."
+L["Show additional options."] = true
+L["Set the name for the new datatext panel."] = true
+L["Slots"] = true
+L["Sets number of datatext slots for the panel"] = true
+L["Hide panel background"] = true
+L["Don't show this panel, only datatexts assinged to it"] = true
+L["Anchor"] = true
+L["Anchor Point"] = true
+L["Panel anchors itself on the parent frame with this point."] = true
+L["Panel anchors itself to this point on the parent frame."] = true
+L["Strata"] = true
+L["Defines on what layer of the UI your panel will be: higher layer/number allows the panel to overlap more other frames. If you are not sure, leave this option at \"2. Low\""] = true
+L["DT_Slot_Change_Text"] = "You are going to set slots from |cff1784d1%s|r to |cff1784d1%s|r. Changing this option will reset datatexts' for the panel to default values. Continue?"
+L["Deleting the panel will erase all it's setting and you'll not be able to restore them. Continue?"] = true
+L["Are you sure you want to create a panel with those parameters?\nThis action will require a reload."] = true
+L["farleft"] = "Far Left"
+L["farright"] = "Far Right"
+L["Sets width of the panel"] = true
+L["Sets height of the panel (height of each individual datatext)"] = true
+L["Panel with the name %s already exist. Please choose another one."] = true
+L["Panel Transparency"] = true
+L["Growth Direction"] = true
+L["Width"] = true
+L["Height"] = true
+L["X-Offset"] = true
+L["Y-Offset"] = true
+L["Border"] = true
+L["Mouse Over"] = true
+L["Hide In Combat"] = true
+L["Hide In Vehicle"] = true
+
+-- EquipmentSetSwitch
+L["Equipment Set Switch"] = true
+L["Swap Equipment Sets"] = true
+L["Change equipment sets when you change your spec."] = true
+L["Primary Talents"] = true
+L["Secondary Talents"] = true
+L["Choose the equipment set to use for your primary spec."] = true
+L["Choose the equipment set to use for your secondary spec."] = true
+L["No Change"] = true
