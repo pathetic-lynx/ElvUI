@@ -24,6 +24,7 @@ function UF:Construct_PlayerFrame(frame)
 	frame.Debuffs = self:Construct_Debuffs(frame)
 	frame.Castbar = self:Construct_Castbar(frame, L["Player Castbar"])
 	frame.Swing = self:Construct_Swingbar(frame)
+	frame.Swing2 = self:Construct_Swingbar(frame, true)
 
 	--Create a holder frame all "classbars" can be positioned into
 	if CAN_HAVE_CLASSBAR then
@@ -165,6 +166,7 @@ function UF:Update_PlayerFrame(frame, db)
 
 	--SwingBar
 	UF:Configure_Swingbar(frame)
+	UF:Configure_Swingbar(frame, true)
 
 	--Debuff Highlight
 	UF:Configure_DebuffHighlight(frame)
